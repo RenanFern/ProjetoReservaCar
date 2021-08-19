@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReservaCar</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/sobre__reservacar.png">
+    <link rel="stylesheet" href="/CSS/Cabecalho.css">
+    <link rel="stylesheet" href="/CSS/Sobre.css">
+    <link rel="stylesheet" href="/CSS/Colecao.css">
+    <link rel="stylesheet" href="/CSS/Formulario.css">
+    <link rel="stylesheet" href="/CSS/Rodape.css">
+    <link rel="stylesheet" href="/CSS/Formulario-cadastro.css">
+    <link rel="stylesheet" href="/CSS/Login.css">
+    <link rel="stylesheet" href="/CSS/Reserva-veiculos.css">
+    <link rel="stylesheet" href="/CSS/Cadastro-cliente.css">
+    <link rel="stylesheet" href="/CSS/Cadastro-veiculo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <img id="logo__imagem" src="/images/logo.png" alt="logo">
+            <h1 class="cabecalho__titulo">ReservaCar</h1>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__lista">
+                <li class="menu__item"><a class="menu__link abrirLogin" href="#">Login</a></li>
+                <li class="menu__item"><a class="menu__link cadastro" href="#">Cadastro</a></li>
+                <li class="menu__item" onclick="clickLista()"><a class="menu__link bar" href="#">Menu<i class="fas fa-sort-down menu__link-arrow"></i></a></li>
+            </ul>
+        </nav>
+        
+        <!-- lista de menu oculto -->
+        <div class="menu__lista-oculto" id="menu__ocultoid">
+           <nav>
+               <ul class="menu__lista-oculto-ul">
+                   <li class="menu__lista-oculto-item"><a class="menu__lista-oculto-link abrirReserva" href="#">Reserva de Veículos</a></li>
+                   <li class="menu__lista-oculto-item"><a class="menu__lista-oculto-link abrirVeiculos" href="#">Cadastro de Veículos</a></li>
+                   <li class="menu__lista-oculto-item"><a class="menu__lista-oculto-link abrirCliente" href="#">Cadastro de Cliente</a></li>
+               </ul>
+           </nav>
+        </div>
+    </header>
+
+
+    <main class="container__geral">
+        <section class="banner">
+           <p class="banner__paragrafo">Escolha o modelo e faça a sua Reserva</p>
+            <img class="banner__imagem" src="/images/banner.png" id="banner" alt="banner">
+            <h2 class="sobre__titulo">Sobre</h2>
+        </section>
+        
+        <section class="sobre">
+            <div class="sobre__sabrina">
+                <img class="sobre__sabrina-imagem" src="/images/sobre__sabrina.png" alt="sobre-sabrina">
+                <div class="sobre__conteudo">
+                   <h3 class="sobre__conteudo-titulo">Sabrina</h3>
+                   <p>Fundadora da ReservaCar</p>
+                </div> 
+            </div>
+
+            <div class="sobre__reservacar">
+                <img class="sobre__reservacar-imagem" src="/images/sobre__reservacar.png" alt="sobre-reservacar">
+                <div class="sobre__conteudo">
+                    <h3 class="sobre__conteudo-titulo">ReservaCar</h3>
+                    <p>É uma empresa Fundada em 2015 com mais de 50 veículos catalogados para aluguel</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container__colecao">
+            <h3 class="colecao__titulo">Nossa Coleção</h3>
+            <div class="colecao">
+                <img class="colecao__imagem" src="/images/punto.png" alt="punto">
+                <div class="colecao__descricao">
+                    <p class="descricao__punto-nome" ><i class="fas fa-car icon"></i>Fiat Punto</p>
+                    <p class="descricao__punto-portas"><i class="fas fa-cog icon"></i>1.4/ 4 Portas</p>
+                    <p class="descricao__punto-pessoas"><i class="fas fa-user-friends icon"></i>5 Pessoas</p>
+                </div>
+            </div>
+            
+            <div class="colecao">
+                <img class="colecao__imagem" src="/images/doblo.png" alt="doblo">
+                <div class="colecao__descricao">
+                    <p class="descricao__doblo-nome"><i class="fas fa-car icon"></i>Doblo</p>
+                    <p class="descricao__doblo-portas"><i class="fas fa-cog icon"></i>1.8/ 4 Portas</p>
+                    <p class="descricao__doblo-pessoas"><i class="fas fa-user-friends icon"></i>7 Pessoas</p>
+                </div>
+            </div>
+            
+            <div class="colecao">
+                <img class="colecao__imagem" src="/images/yaris.png" alt="yaris">
+                <div class="colecao__descricao">
+                    <p class="descricao__yaris-nome"><i class="fas fa-car icon"></i>Yaris</p>
+                    <p class="descricao__yaris-portas"><i class="fas fa-cog icon"></i>1.3/ 4 Portas</p>
+                    <p class="descricao__yaris-pessoas"><i class="fas fa-user-friends icon"></i>5 Pessoas</p>
+                </div>
+            </div>
+            
+            <div class="colecao">
+                <img class="colecao__imagem" src="/images/corolla.png" alt="corolla">
+                <div class="colecao__descricao">
+                    <p class="descricao__corolla-nome"><i class="fas fa-car icon"></i>Corolla</p>
+                    <p class="descricao__corolla-portas"><i class="fas fa-cog icon"></i>1.8/ 4 Portas</p>
+                    <p class="descricao__corolla-pessoas"><i class="fas fa-user-friends icon"></i>5 Pessoas</p>
+                </div>
+            </div>
+            
+            <div class="colecao">
+                <img class="colecao__imagem" src="/images/hilux.png" alt="hilux">
+                <div class="colecao__descricao">
+                    <p class="descricao__hilux-nome"><i class="fas fa-car icon"></i>Hilux</p>
+                    <p class="descricao__hilux-portas"><i class="fas fa-cog icon"></i>2.8/ 4 Portas</p>
+                    <p class="descricao__hilux-pessoas"><i class="fas fa-user-friends icon"></i>5 Pessoas</p>
+                </div>
+            </div>
+
+        </section>
+            
+    </main>
+
+    <form class="formulario">
+        <img class="formulario__imagem"  src="/images/logo-formulario.png" alt="logo-formulario">
+        <h3 class="formulario__titulo">Alugue um Carro</h3>
+        <div class="formulario__local">
+            <label for="local"></label><i class="fas fa-map-marker-alt icon-gps"></i>
+            <input type="text" name="local" id="local" class="formulario__input" placeholder=" Local De Retirada">
+        </div>
+
+        <div class="formulario__data">
+            <label for="retirada"></label>
+            <input type="date" name="retirada" id="retirada" class="formulario__input" placeholder="Data de Retirada">
+            
+            <label for="entrega"></label>
+            <input type="date" name="entrega" id="entrega" class="formulario__input" placeholder="Data de Entrega">
+        </div>
+
+            
+        <input type="submit" value="Buscar" id="botao" >
+    </form>
+            
+            
+<footer class="rodape">
+    <p class="rodape__descricao">	&#169;RenanFernandes </p>
+</footer>
+
+
+
+<!-- Cadastro de Usuario -->
+<div class="container" id="iniciamodal">
+    <div class="container__modal">
+        <button class="fechar">X</button>
+        <form class="formulario__cadastro">
+            <h2 class="formulario__cadastro-titulo">Cadastre-se</h2>
+            
+            <div class="formulario__dados">
+                <label class="formulario__itens" for="matricula"></label>
+                <input class="formulario__itens" type="text" id="matricula" name="matricula"  placeholder="Matricula">
+                
+                <label for="nome"></label>
+                <input class="formulario__itens" type="text" id="nome" name="nome" placeholder="Nome">
+                
+                <label for="sobrenome"></label>
+                <input class="formulario__itens" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                
+                <label for="telefone"></label>
+                <input class="formulario__itens" type="tel" id="telefone" name="telefone" placeholder="Telefone">
+                
+                <label for="email"></label>
+                <input class="formulario__itens" type="email" id="email" name="email" placeholder="E-mail">
+                
+                <label for="senha"></label>
+                <input class="formulario__itens" type="password"  id="senha" name="senha" placeholder="Senha">
+                
+                <label for="cpf"></label>
+                <input class="formulario__itens" type="number" id="cpf" name="cpf" placeholder="CPF">
+                
+                <label for="data"></label>
+                <input class="formulario__itens" type="date" id="data" name="data" >
+            </div>
+
+            <div class="formulario__sexo">
+                <div class="formulario__sexo-masculino">
+                    <input type="radio" id="masculino" name="sexo" value="Masculino" >
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div class="formulario__sexo-feminino">
+                    <input type="radio" id="feminino" name="sexo" value="Feminino" >
+                    <label for="feminino">Feminino</label>
+                </div>
+            </div>
+
+
+            <input type="submit" id="btn" value="Cadastrar">
+        </form>
+    </div>
+
+</div>
+
+
+<!-- Login -->
+ <div class="login__bg" id="iniciaLogin">
+    <div class="login">
+        <button class="login__fechar">X</button>
+        <form class="formulario__login">
+            <h2 class="login__titulo">Login</h2>
+           <div class="login__dados">
+               <label for="email"></label>
+               <input type="email" id="email__login" name="email" placeholder="E-mail" >
+               
+               <label for="senha"></label>
+               <input type="password" id="senha__login" name="senha" placeholder="Senha">
+               
+               <input type="submit" value="Login" id="botao__login-id" class="botao__login">
+            </div>
+            <ul class="login__lista">
+                <li class="login__item"><a class="login__link" onclick="redirecionar()" href="#">Não tem conta? Clique aqui e Cadastre-se</a></li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+
+<!-- Reserva de veículos -->
+<div class="container__reserva" id="container__reservaid">
+    <div class="reserva__veiculos">
+        <button class="fechar__reserva-veiculos">X</button>
+        <h2 class="reserva__veiculos-titulo"> Reserva de Veículos</h2>
+        <form class="formulario__reserva-veiculos">
+            <label for="cliente"></label>
+            <input type="text" id="cliente" name="cliente" placeholder="Cliente">
+
+            <label for="id-reserva"></label>
+            <input type="number" id="id-reserva" name="ida-reserva" placeholder="ID da Reserva">
+            
+            <label for="veiculo"></label>
+            <input type="text" id="veiculo" name="veiculo" placeholder="Veículo">
+            
+            <label for="data__reserva"></label>
+            <input class="data__reserva-veiculo" type="date" id="data__reserva" name="data__reserva" placeholder="Data da Reserva">
+
+            <label for="data__locacao"></label>
+            <input  class="data__reserva-veiculo" type="date" id="data__locacao" name="data__locacao" placeholder="Data da Locação">
+
+            <label for="data__entrega"></label>
+            <input class="data__reserva-veiculo" type="date" id="data__entrega" name="data__entrega" placeholder="Previsão de Entrega">
+
+            <label for="valor"></label>
+            <input type="number" id="valor" name="valor" placeholder="Valor Total">
+
+            <label for="usuario"></label>
+            <input type="text" id="usuario" name="usuario" placeholder="Usuário Responsável">
+            
+            <div class="formulario__reserva-botao">
+                <input type="submit" id="botao__reserva" value="Gravar" >
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Cadastro de veículos -->
+<div class="container__veiculos" id="iniciar__veiculo">
+    <div class="veiculos">
+        <button class="fechar__veiculo">X</button>
+        <h2 class="veiculos__titulo">Cadastro de Veículos</h2>
+
+        <form class="veiculos__formulario">
+            <label for="marca"></label>
+            <input type="text" id="marca" name="marca" placeholder="Marca">
+            
+            <label for="modelo"></label>
+            <input type="text" id="modelo" name="modelo" placeholder="Modelo">
+            
+
+            <label for="id__veiculo"></label>
+            <input type="number" id="id__veiculo" name="id__veiculo" placeholder="ID">
+
+            <label for="placa"></label>
+            <input type="text" id="placa" name="placa" placeholder="Placa">
+
+            <label for="cor"></label>
+            <input type="text" id="cor" name="cor" placeholder="Cor">
+
+            <label for="ano"></label>
+            <input type="number" id="ano" name="ano" placeholder="Ano" >
+            
+            <div class="botao__veiculo">
+                <input type="submit" id="botao__veiculoid" value="Cadastrar">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- Cadastro-cliente -->
+<div class="container__cliente " id="iniciar__cliente">
+    <div class="cliente">
+        <button class="fechar__cliente">X</button>
+        <h2 class="cliente__titulo">Cadastro de Cliente</h2>
+        <form class="cliente__formulario">
+            <label for="nome"></label>
+            <input type="text" id="nome__cliente" name="nome" placeholder="Nome">
+
+            <label for="id"></label>
+            <input type="number" id="id__cliente" name="id" placeholder="ID">
+            
+            <label for="razaoSocial"></label>
+            <input type="text" id="razao__social" name="razaoSocial" placeholder="Razão Social">
+
+            <label for="CPF"></label>
+            <input type="number" id="cpf__cliente" name="cpf" placeholder="CPF/CNPJ">
+
+            <label for="fantasia"></label>
+            <input type="text" id="fantasia" name="fantasia" placeholder="Nome Fantasia">
+
+            <label for="tel__cliente"></label>
+            <input type="tel" id="tel__cliente" name="tel__cliente" placeholder="Telefone">
+
+            <label for="endereco"></label>
+            <input type="text" id="endereco" name="endereco" placeholder="Endereço">
+
+            <label for="cep"></label>
+            <input type="text" id="cep" name="cep" placeholder="CEP">
+
+            <label for="complemento"></label>
+            <input type="text" id="complemento" name="complemento" placeholder="Complemento">
+
+            <label for="cidade"></label>
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+
+            <label for="uf"></label>
+            <input type="text" id="uf" name="uf" placeholder="UF">
+
+            <label for="inscricao"></label>
+            <input type="text" id="incricao" name="incricao" placeholder="Inscrição Estadual">
+
+            <label for="email__cliente"></label>
+            <input type="email" id="email__cliente" name="email__cliente" placeholder="E-mail">
+            
+            <div class="btn__cliente-classe">
+                <input type="submit" id="btn__cliente" value="Cadastrar" >
+            </div>
+
+        </form>
+    </div>
+</div>   
+        
+
+<script src="/script.js"></script>
+
+    
+</body>
+</html>

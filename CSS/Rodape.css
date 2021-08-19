@@ -1,0 +1,9 @@
+.rodape{
+    border-top: 1px solid #B8B4B4;;
+    margin-top: 5%;
+
+}
+.rodape__descricao{
+    color: #B8B4B4;
+    text-align: center;
+}

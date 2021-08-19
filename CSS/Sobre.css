@@ -1,0 +1,103 @@
+.banner{
+    width: 100vw;
+    position: relative;
+}
+.banner__imagem{
+    width: 100%;
+}
+.banner__paragrafo{
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    color: #F6FCFF;
+    font-size: 36px;
+    opacity: 0.8;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 60%;
+    margin: auto;
+}
+.sobre__titulo{
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+}
+.sobre{
+    width: 80%;
+    margin: 3% auto;
+    display: flex;
+    justify-content: space-around;
+}
+.sobre__sabrina{
+    display: flex;
+    width: 25%;
+}
+.sobre__reservacar{
+    display: flex;
+    width: 25%;
+}
+.sobre__conteudo{
+    padding: 5px;
+}
+.sobre__conteudo h3{
+    margin-bottom: 10px;
+}
+
+
+.sobre__sabrina-imagem{
+    max-height: 150px;
+}
+.sobre__reservacar-imagem{
+    max-height: 150px;
+}
+
+@media ( max-width: 728px){
+
+    .container__geral{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+    .banner{
+        display: flex;
+        flex-direction: column;
+    }
+    .banner__imagem{
+        display: none;
+    }
+    .banner__paragrafo{
+        display: none;
+    }
+    .sobre{
+        flex-direction: column;
+        width: 100%;
+    }
+    .sobre__sabrina{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .sobre__reservacar{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    
+    }
+    .sobre__sabrina-imagem{
+        width: 150px;
+        height: 170px;
+    
+    }
+    .sobre__reservacar-imagem{
+        width: 150px;
+        height: 170px;
+    
+    }
+    .sobre__conteudo{
+        width: 100%;
+        text-align: center;
+    }
+
+}

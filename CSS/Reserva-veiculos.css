@@ -1,0 +1,131 @@
+.container__reserva{
+    display: none;
+    z-index: 2000;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+}
+
+.container__reserva.reserva__mostrar{
+    display: flex;
+}
+
+.reserva__veiculos{
+    width: 938px;
+    height: 390px;
+    border-radius: 10px;
+    background-color: #EDF8FE;
+    padding: 16px;
+    position: relative;
+}
+
+@keyframes reserva{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.reserva__mostrar .reserva__veiculos{
+    animation: reserva .3s;
+}
+
+
+.reserva__veiculos-titulo{
+    text-align: center;
+    margin: 16px;
+    font-size: 32px;
+}
+
+.formulario__reserva-veiculos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.formulario__reserva-veiculos input{
+    height: 42px;
+    width: 270px;
+    border-radius:5px;
+    border: none;
+    margin: 16px;
+    font-size: 16px;
+
+
+}
+.formulario__reserva-veiculos ::placeholder{
+    color: #B8B4B4;
+}
+.data__reserva-veiculo{
+    color: #B8B4B4;
+}
+.formulario__reserva-botao{
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+#botao__reserva{
+    background-color:#63E1FD;
+    color:#F6FCFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+#botao__reserva:hover{
+    background-color:#5CD3ED;
+    transition: 250ms;
+}
+#botao__reserva:active{
+  transform: scale(1.1);
+}
+
+
+.fechar__reserva-veiculos{
+    background: #63E1FD;
+    color: #F6FCFF;
+    position:absolute;
+    right: -5px;
+    top: -5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid;
+    cursor: pointer;
+}
+.fechar__reserva-veiculos:hover{
+    background: #5CD3ED;
+    transition: 250ms;
+    
+}
+.fechar__reserva-veiculos:active{
+    transform: scale(1.1);
+    
+}
+
+@media ( max-width: 728px){
+    .reserva__veiculos{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .formulario__reserva-veiculos{
+        text-align: center;
+        display: initial;
+    }
+}
+@media screen and ( min-width:720px ) and (max-width: 1024px){
+    .container__reserva{
+        width: 100%;
+        height: 100%;
+    }
+    .reserva__veiculos{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body{
+    background: #F6FCFF;
+}
+.cabecalho{
+    display: flex;
+    height: 87px;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.cabecalho__titulo{
+    font-size: 32px;
+    font-weight: 550;
+}
+.menu{
+    width: 244px;
+    margin: auto 0;
+}
+.menu__lista{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+
+.menu__link{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color:#F6FCFF;
+    background: #63E1FD;
+}
+
+.menu__link:hover{
+    background-color:#5CD3ED;
+    transition: 250ms;
+}
+.menu__link-arrow{
+ vertical-align: 0%;
+}
+
+.bar.mostrarLista{
+    background-color: #EDF8FE;
+    color: black;
+}
+.menu__lista-oculto{
+    background-color:#EDF8FE ;
+    width: 260px;
+    height: 240px;
+    border-radius: 20px 0 20px 20px;
+    position: absolute;
+    right: 10%;
+    top: 60px;
+    z-index: 1;
+    padding: 10px;
+    display: none;
+    animation: animateLista ;
+    animation-duration: 200ms;
+
+
+}
+
+@keyframes animateLista{
+    from{ opacity: 1;}
+    from{ opacity: 0;}
+
+}
+.menu__lista-oculto.mostrarLista{
+    display: block;
+}
+.menu__lista-oculto-link{
+    text-decoration: none;
+    color: #F6FCFF;
+    margin:auto;
+}
+.menu__lista-oculto-item{
+    list-style: none;
+    width: 100%;
+    height: 32px;
+    border-radius: 5px;
+    background: #5CD3ED;
+    display: flex;
+    align-items: center;
+}
+.menu__lista-oculto-ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 210px;
+}
+
+
+/* mobile */
+@media ( max-width: 728px){
+    .cabecalho{
+        width: 100%;
+        flex-direction: column;
+        height: 180px;
+    
+    }
+    .logo{
+        flex-direction: column;
+        margin-top: 8px;
+    }
+    #logo__imagem{
+        display: none;
+    }
+    .menu{
+        width: 100%;
+    }
+    .menu__lista{
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu__link{
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+    .menu__item{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu__lista-oculto{
+        top: 170px;
+        width: 100%;
+        position: initial;
+    }
+    
+}

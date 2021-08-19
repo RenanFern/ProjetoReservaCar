@@ -1,0 +1,118 @@
+.container__cliente{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.container__cliente.cliente__mostrar{
+    display: flex;
+}
+
+.cliente{
+    width: 938px;
+    height: 550px;
+    border-radius: 10px;
+    background-color: #EDF8FE ;
+    padding: 16px;
+    position: relative;
+}
+
+@keyframes clientes{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.cliente__mostrar .cliente{
+    animation: clientes .3s;
+}
+
+.cliente__titulo{
+    text-align: center;
+    margin: 16px;
+    font-size: 32px;
+}
+
+.cliente__formulario{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cliente__formulario input{
+    height: 42px;
+    width: 270px;
+    border-radius: 5px;
+    border: none;
+    margin: 16px;
+    font-size: 16px;
+   
+
+}
+#btn__cliente{
+    background-color: #63E1FD;
+    color:#F6FCFF;
+    width: 270px;
+    height: 42px;
+    margin: 90px auto;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#btn__cliente:hover{
+    background-color:#5CD3ED;
+    transition: 250ms;
+}
+#btn__cliente:active{
+  transform: scale(1.1);}
+
+.fechar__cliente{
+    background: #63E1FD;
+    color: #F6FCFF;
+    position:absolute;
+    right: -5px;
+    top: -5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid;
+    cursor: pointer;
+}
+.fechar__cliente:hover{
+    background: #5CD3ED;
+    transition: 250ms;
+    
+}
+.fechar__cliente:active{
+    transform: scale(1.1);
+    
+}
+@media ( max-width: 728px){
+    .cliente{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        padding: 0px;
+    }
+    #btn__cliente{
+        margin: 16px 0 32px 0;
+    }
+    .cliente__formulario{
+        justify-content: center;
+    }
+    .cliente__formulario input{
+       margin:16px 0;
+    
+    }
+}
